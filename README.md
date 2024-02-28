@@ -1,6 +1,6 @@
 # media-stack
 
-A stack of self-hosted media managers and streamer along with VPN. 
+A stack of self-hosted media managers and streamer without a VPN.
 
 Stack include Radarr, Sonarr, Prowlarr, qBittorrent and Jellyfin.
 
