@@ -29,4 +29,10 @@ sudo docker cp nginx.conf nginx:/etc/nginx/conf.d/default.conf
 sudo docker exec -it nginx nginx -s reload
 ```
 
+## Namecheap Setup
+|     Type     | Host | Value  |
+|--------------|------|--------|
+| A Record     | @    | ip     |
+| CNAME Record | www  | domain |
+
 Now configure radarr, sonarr, prowlarr, qbittorrent and jellyfin and enjoy 🏴‍☠️ .
