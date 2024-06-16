@@ -47,9 +47,9 @@ sudo docker exec -it nginx nginx -s reload
 ```
 
 ## Namecheap Setup
-|     Type     | Host | Value  |
-|--------------|------|--------|
-| A Record     | @    | ip     |
-| CNAME Record | www  | domain |
+|   Type   | Host | Value  |
+|----------|------|--------|
+| A Record | *    | ip     |
+| A Record | @    | ip     |
 
 Now configure radarr, sonarr, prowlarr, qbittorrent and jellyfin and enjoy 🏴‍☠️ .
