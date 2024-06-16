@@ -29,12 +29,6 @@ sudo docker exec sonarr-INSERTID chown abc:users /downloads/shows
 
 ## Docker setup
 
-Change docker-compose.yaml to expose ports for each container eg for radarr.
-```
-ports:
-    3000:3000
-```
-
 ```
 # create internal network, binds to localhost instead of 0.0.0.0
 sudo docker network create internal -o "com.docker.network.bridge.host_binding_ipv4=127.0.0.1"
