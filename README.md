@@ -4,13 +4,36 @@ A stack of self-hosted media managers and streamer without a VPN.
 
 Stack include Radarr, Sonarr, Prowlarr, qBittorrent and Jellyfin.
 
+## Coolify setup
+
+Set domain names for each container to include ports:
+qbittorrent:5080
+prowlarr:3000
+sonarr:3000
+radarr:3000
+jellyfin:8096
+
+I also had to manually create a movies and shows folder within the download volume
+```bash
+sudo docker exec sonarr-INSERTID mkdir /downloads/movies
+sudo docker exec sonarr-INSERTID mkdir /downloads/shows
+sudo docker exec sonarr-INSERTID chown abc:users /downloads/movies
+sudo docker exec sonarr-INSERTID chown abc:users /downloads/shows
+```
+
 ## Requirements
 
 - Docker version 24.0.5 and above
 - Docker compose version v2.20.2 and above
 - It may also work on some of lower versions, but its not tested.
 
-## Install media stack
+## Docker setup
+
+Change docker-compose.yaml to expose ports for each container eg for radarr.
+```
+ports:
+    3000:3000
+```
 
 ```
 # create internal network, binds to localhost instead of 0.0.0.0

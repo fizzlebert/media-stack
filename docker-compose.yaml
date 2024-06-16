@@ -13,10 +13,6 @@ services:
     volumes:
       - qbittorrent-config:/config
       - torrent-downloads:/downloads
-    ports:
-      - 5080:5080
-      - 6881:6881
-      - 6881:6881/udp
     restart: "unless-stopped"
 
   radarr:
@@ -26,8 +22,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
-    ports:
-      - 7878:7878
     volumes:
       - radarr-config:/config
       - torrent-downloads:/downloads
@@ -43,8 +37,6 @@ services:
     volumes:
       - sonarr-config:/config
       - torrent-downloads:/downloads
-    ports:
-      - 8989:8989
     restart: "unless-stopped"
 
   prowlarr:
@@ -56,8 +48,6 @@ services:
       - TZ=UTC
     volumes:
       - prowlarr-config:/config
-    ports:
-      - 9696:9696
     restart: "unless-stopped"
 
   jellyfin:
@@ -70,10 +60,6 @@ services:
     volumes:
       - jellyfin-config:/config
       - torrent-downloads:/data
-    ports:
-      - 8096:8096
-      - 7359:7359/udp
-      - 8920:8920
     restart: "unless-stopped"
 
 volumes:
